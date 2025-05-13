@@ -1,12 +1,17 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { LoginComponent } from '../login/login.component';
 
 @Component({
   selector: 'app-inicio',
-  imports: [RouterLink],
+  standalone: true,
+  imports: [LoginComponent],
   templateUrl: './inicio.component.html',
-  styleUrl: './inicio.component.css'
+  styleUrls: ['./inicio.component.css']
 })
 export class InicioComponent {
-  
+  mostrarLogin = false;
+
+  toggleLoginModal() {
+    this.mostrarLogin = !this.mostrarLogin;
+  }
 }

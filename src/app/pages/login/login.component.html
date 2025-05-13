@@ -1,29 +1,128 @@
-<div class="bg-blue-800 text-white p-10 rounded-lg shadow-lg w-full max-w-md">
-    <h2 class="text-2xl font-bold mb-6 text-center">Iniciar Sesión</h2>
-
-    <form>
-      <input 
-        type="text" 
-        placeholder="Usuario" 
-        class="w-full px-4 py-3 rounded-md mb-4 text-black bg-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-      />
-
-      <input 
-        type="password" 
-        placeholder="Contraseña" 
-        class="w-full px-4 py-3 rounded-md mb-4 text-black bg-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-      />
-
-      <button 
-        type="submit" 
-        class="w-full bg-white text-blue-800 font-semibold py-2 rounded-md hover:bg-gray-200 transition duration-200"
-      >
-        Ingresar
-      </button>
-
-      <div class="mt-4 text-sm text-center">
-        <p>¿Olvidaste tu contraseña?</p>
-        <a href="#" class="text-blue-300 hover:underline">Restablécela aquí</a>
+<header class="bg-white shadow-sm">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="/" class="text-2xl font-bold text-blue-600">EventoTickets</a>
+      <div class="flex items-center gap-4">
+        <a href="/eventos" class="text-gray-600 hover:text-blue-600">Eventos</a>
+        <a href="/categorias" class="text-gray-600 hover:text-blue-600">Categorías</a>
+        <a href="/mi-cuenta" class="text-gray-600 hover:text-blue-600">Mi Cuenta</a>
       </div>
-    </form>
-  </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container mx-auto px-4 py-12">
+    <div class="max-w-md mx-auto bg-white rounded-lg shadow-md p-8">
+      <div class="text-center mb-8">
+        <h1 class="text-2xl font-bold">Iniciar Sesión</h1>
+        <p class="text-gray-500 mt-2">Accede a tu cuenta para comprar boletas</p>
+      </div>
+
+      <form>
+        <div class="space-y-4 mb-6">
+          <!-- Email -->
+          <div>
+            <label for="email" class="block text-sm font-medium">Correo Electrónico</label>
+            <div class="relative mt-1">
+                <svg class="w-4 h-4 mr-2 text-gray-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <path d="M22 6l-10 7L2 6" />
+                </svg>
+                <input id="email" type="email" placeholder="tu@email.com" class="pl-10 w-full border border-gray-300 rounded-md p-2">
+            </div>
+          </div>
+
+          <!-- Password -->
+          <div>
+            <div class="flex justify-between items-center">
+              <label for="password" class="text-sm font-medium">Contraseña</label>
+              <a href="/recuperar-contrasena" class="text-sm text-blue-600 hover:underline">¿Olvidaste tu contraseña?</a>
+            </div>
+            <div class="relative mt-1">
+              <svg class="absolute left-3 top-3 text-gray-400" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <rect x="3" y="11" width="18" height="11" rx="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" />
+              </svg>
+              <input id="password" type="password" placeholder="••••••••" class="pl-10 w-full border border-gray-300 rounded-md p-2">
+            </div>
+          </div>
+
+          <!-- Remember me -->
+          <div class="flex items-center space-x-2">
+            <input type="checkbox" id="remember" class="w-4 h-4 text-blue-600">
+            <label for="remember" class="text-sm font-medium">Recordarme</label>
+          </div>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-md text-lg mb-4">Iniciar Sesión</button>
+      </form>
+
+      <!-- Separator -->
+      <div class="relative my-6">
+        <div class="absolute inset-0 flex items-center">
+          <div class="w-full border-t border-gray-300"></div>
+        </div>
+        <div class="relative flex justify-center">
+          <span class="bg-white px-2 text-sm text-gray-500">O continúa con</span>
+        </div>
+      </div>
+
+      <!-- Social Buttons -->
+      <div class="grid grid-cols-2 gap-4 mb-6">
+        <button class="flex items-center justify-center gap-2 border border-gray-300 py-2 rounded-md">
+          <svg width="16" height="16" fill="currentColor" class="text-blue-600" viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.9 9.8v-6.9h-2.1v-2.9h2.1v-2.2c0-2.1 1.3-3.3 3.2-3.3.9 0 1.8.2 1.8.2v2h-1c-1 0-1.3.6-1.3 1.2v1.4h2.3l-.4 2.9h-1.9v6.9A10 10 0 0 0 22 12" /></svg>
+          <span>Facebook</span>
+        </button>
+        <button class="flex items-center justify-center gap-2 border border-gray-300 py-2 rounded-md">
+          <svg width="16" height="16" fill="currentColor" class="text-black" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 7.1 17.1l-2.8-2.8A6 6 0 1 1 18 12h-6v3h9a9 9 0 0 0 1-4A10 10 0 0 0 12 2" /></svg>
+          <span>Google</span>
+        </button>
+      </div>
+
+      <!-- Register -->
+      <p class="text-center text-gray-500 text-sm">
+        ¿No tienes una cuenta?
+        <a href="/registro" class="text-blue-600 hover:underline">Regístrate</a>
+      </p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-12 mt-12">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-xl font-bold mb-4">EventoTickets</h3>
+          <p class="text-gray-300">Tu plataforma de confianza para la compra de boletas en línea.</p>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Enlaces Rápidos</h4>
+          <ul class="space-y-2">
+            <li><a href="/eventos" class="text-gray-300 hover:text-white">Eventos</a></li>
+            <li><a href="/categorias" class="text-gray-300 hover:text-white">Categorías</a></li>
+            <li><a href="/promociones" class="text-gray-300 hover:text-white">Promociones</a></li>
+            <li><a href="/calendario" class="text-gray-300 hover:text-white">Calendario</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Soporte</h4>
+          <ul class="space-y-2">
+            <li><a href="/ayuda" class="text-gray-300 hover:text-white">Centro de Ayuda</a></li>
+            <li><a href="/contacto" class="text-gray-300 hover:text-white">Contacto</a></li>
+            <li><a href="/faq" class="text-gray-300 hover:text-white">Preguntas Frecuentes</a></li>
+            <li><a href="/reembolsos" class="text-gray-300 hover:text-white">Política de Reembolsos</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Legal</h4>
+          <ul class="space-y-2">
+            <li><a href="/terminos" class="text-gray-300 hover:text-white">Términos y Condiciones</a></li>
+            <li><a href="/privacidad" class="text-gray-300 hover:text-white">Política de Privacidad</a></li>
+            <li><a href="/cookies" class="text-gray-300 hover:text-white">Política de Cookies</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
+        <p>&copy; 2025 EventoTickets. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
